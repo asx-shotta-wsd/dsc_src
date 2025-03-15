@@ -1,0 +1,8 @@
+Model Information:
+* title:	Sneakers "Seen"
+* source:	https://sketchfab.com/3d-models/sneakers-seen-c93a6c6d4e96461c89b519bfcc9cf36c
+* author:	AlLEXSam (https://sketchfab.com/AlLEXSam)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

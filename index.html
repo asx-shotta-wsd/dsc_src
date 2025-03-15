@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+    type="image/x-icon"
+    href="favicon.ico">
+  <title>Three.js Touch Rotation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    if (location.hostname === "localhost" || location.hostname === "192.168.19.32") {
+      // ローカル環境なら index.js を直接読み込む（デバッグしやすくする）
+      const script = document.createElement("script");
+      script.type = "module";
+      script.src = "./index.js";
+      document.body.appendChild(script);
+    } else {
+      // 本番環境（GitHub Pages）なら bundle.js を読み込む
+      const script = document.createElement("script");
+      script.type = "module";
+      script.src = "./bundle.js";
+      document.body.appendChild(script);
+    }
+  </script>
+  </script>
+  <div style="position: absolute; right: 50px; top: 50px;">
+    <button style="width: 200px; height: 100px; border-radius: 50px; border: none; font-size: 30px; "
+      id="fullscreen-btn">全画面</button>
+    <button style="width: 200px; height: 100px; border-radius: 50px; border: none; font-size: 30px; "
+      id="next-btn">次</button>
+  </div>
+</body>
+
+</html>

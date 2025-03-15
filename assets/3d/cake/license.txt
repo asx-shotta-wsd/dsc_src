@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chocolate Mousse Cake
+* source:	https://sketchfab.com/3d-models/chocolate-mousse-cake-d07b23210db44830a76a8fb5ddb49c95
+* author:	M Parkinson (https://sketchfab.com/chimaera_studio)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chocolate Mousse Cake" (https://sketchfab.com/3d-models/chocolate-mousse-cake-d07b23210db44830a76a8fb5ddb49c95) by M Parkinson (https://sketchfab.com/chimaera_studio) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
