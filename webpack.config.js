@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 追加
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './index.js', // 入力ファイル
@@ -14,6 +16,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
+      },
+      {
+        test: /\.css$/, // CSS ファイルを処理
+        use: [MiniCssExtractPlugin.loader, 'css-loader'] // MiniCssExtractPlugin を利用
       }
     ]
   },
@@ -26,12 +32,30 @@ module.exports = {
         { from: 'assets', to: 'assets' },
         { from: 'favicon.ico', to: 'favicon.ico' }, // favicon.ico を dist にコピー
       ]
-    })
+    }),
+    new MiniCssExtractPlugin({ filename: 'index.css' }) // CSS を dist に出力
   ],
   resolve: {
     alias: {
       three: path.resolve(__dirname, 'node_modules/three'),
     },
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true, // console.logを削除
+            drop_debugger: true, // debuggerを削除
+            passes: 3, // 圧縮の繰り返し回数を増やす
+          },
+          output: {
+            comments: false, // コメントを削除
+          },
+        },
+      }),
+    ],
   },
   devServer: {
     static: {
